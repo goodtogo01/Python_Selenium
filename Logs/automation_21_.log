@@ -1,0 +1,11 @@
+12/28/2023 11:50:54 AM: INFO: ***************** Test_003_Add_New_Customer ******************
+
+12/28/2023 11:50:54 AM: INFO: ***************** Start Login with Valid Credentials **********************
+12/28/2023 11:50:57 AM: INFO: **************** Login Successful *******************
+12/28/2023 11:50:57 AM: INFO: ******* Start processing to adding new customer details ***********
+12/28/2023 11:51:08 AM: INFO: ******* Start adding new customer details ***********
+12/28/2023 11:51:25 AM: INFO: *******  new customer details is saved ***********
+12/28/2023 11:51:25 AM: INFO: 
+******* Verify the newly created customer ***********
+12/28/2023 11:51:26 AM: INFO: ********** Customer added successfully **************
+12/28/2023 11:51:27 AM: INFO: ***************** Test_003_Add_New_Customer is completed ******************

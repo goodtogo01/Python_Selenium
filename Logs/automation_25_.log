@@ -1,0 +1,7 @@
+12/28/2023 12:48:33 PM: INFO: ***************** Test_004_Search_Customer_By_Email ******************
+12/28/2023 12:48:33 PM: INFO: ***************** Start Login with Valid Credentials **********************
+12/28/2023 12:48:39 PM: INFO: **************** Login Successful *******************
+12/28/2023 12:48:39 PM: INFO: ******* Start processing to searching a existing customer ***********
+12/28/2023 12:48:39 PM: INFO: ******* Moving to the search page ***********
+12/28/2023 12:48:46 PM: INFO: ******* Start searching processes with email id ***********
+12/28/2023 12:48:57 PM: INFO: ***************** Test_004_Search_Customer_By_Email is completed ******************

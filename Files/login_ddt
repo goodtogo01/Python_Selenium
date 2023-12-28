@@ -1,0 +1,82 @@
+import time
+from secrets import randbelow
+
+import pytest
+
+from pageObjects.LoginPage import Login_Functionalities as LP
+from utilities.readProperties import ReadProperties
+from utilities.customLogger import LogGenerations
+from utilities import XLUtils
+from ddt import ddt, data, unpack
+
+@ddt
+class Test_002_DDT_Login:
+    baseURL = ReadProperties.getURL()
+    data_sheet_path = "C:\\Users\\zaman\\PycharmProjects\\CommerceApp\\TestData\\test_Data.xlsx"
+    save_picture = "C:\\Users\\zaman\\PycharmProjects\\CommerceApp\\Screenshots\\"
+    rand = str(randbelow(55))
+    logger = LogGenerations.logGen()
+
+    @pytest.mark.regression
+    def test_login_with_ddt(self, setup):
+        self.logger.info("***************** Test_002_DDT_Login **********************")
+        self.logger.info("***************** Verifying Login DDT Test **********************")
+        driver = setup
+        loginPage = LP(driver)
+        driver.get(self.baseURL)
+
+        # Get All the rows
+        self.rows = XLUtils.getRowCount(self.data_sheet_path, 'user_login')
+        print("Number of Rows: ", self.rows)
+        list_Status = []  # empty list for actual status
+
+        # Traverse through the number of rows and columns
+        for r in range(2, self.rows + 1):
+            self.user = XLUtils.readData(self.data_sheet_path, 'user_login', r, 1)
+            self.password = XLUtils.readData(self.data_sheet_path, 'user_login', r, 2)
+            self.expected_result = XLUtils.readData(self.data_sheet_path, 'user_login', r, 3)
+
+            # Insert data and click on login button
+            loginPage.setUsername(self.user)
+            loginPage.setPassword(self.password)
+            loginPage.clickLogin()
+            time.sleep(5)
+            loginPage.clickLogout()
+
+            # Validate page title
+            actual_Title = driver.title
+            expected_Title = "Dashboard / nopCommerce administration"
+
+            # Condition check between Test Data and actual data
+
+            if actual_Title == expected_Title:
+                if self.expected_result == "Passed":
+                    self.logger.info(" **** Satus is Passed ****")
+                    # loginPage.clickLogout()
+                    list_Status.append("Passed")
+
+                elif self.expected_result == "Failed":
+                    self.logger.error("**** Satus is Failed ****")
+                    # loginPage.clickLogout()
+                    list_Status.append("Failed")
+
+            elif actual_Title != expected_Title:
+                if self.expected_result == "Passed":
+                    self.logger.error("**** Satus is Failed ****")
+                    list_Status.append("Failed")
+                elif self.expected_result == "Failed":
+                    self.logger.info("**** Satus is Passed ****")
+                    list_Status.append("Passed")
+                print("Number of Item : ",list_Status)
+                break
+            if "Failed" not in list_Status:
+                self.logger.info("**** Login DDT Test is Passed ****")
+                driver.close()
+                assert True
+            else:
+                self.logger.error("**** Login DDT Test is Failed ****")
+                driver.close()
+                assert False
+
+        self.logger.info("***************** End of Login with DDT **********************")
+        self.logger.info("***************** Completed Test_002_DDT_Login **********************")

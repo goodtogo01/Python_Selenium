@@ -1,0 +1,18 @@
+--html=C:\Users\zaman\PycharmProjects\CommerceApp\Reports\report.html
+
+
+pytest -v -s -m "regression" --html=C:\Users\zaman\PycharmProjects\CommerceApp\Reports\report.html --browser chrome
+
+
+# For method only
+# @pytest.mark.parametrize("a, b, result", [(10, 5, 15), (15, 8, 21)])
+
+
+
+@pytest.mark.parametrize("a, b, result", [(1, 2, 3), (4, 5, 9), (11, 12, 23)])
+def test_calculations(tearUp, a, b, result):
+    x = 20
+    y = 30
+    assert x != y
+    assert a + b == result
+    print("Calculation is passed...")

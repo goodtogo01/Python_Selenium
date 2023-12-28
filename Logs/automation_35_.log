@@ -1,0 +1,8 @@
+12/28/2023 12:32:24 PM: INFO: ***************** Test_005_Search_Customer_By_Name ******************
+
+12/28/2023 12:32:24 PM: INFO: ***************** Start Login with Valid Credentials **********************
+12/28/2023 12:32:29 PM: INFO: **************** Login Successful *******************
+12/28/2023 12:32:29 PM: INFO: ******* Start processing to searching a existing customer ***********
+12/28/2023 12:32:29 PM: INFO: ******* Moving to the search page ***********
+12/28/2023 12:32:42 PM: INFO: ******* Start searching processes with Name ***********
+12/28/2023 12:32:48 PM: INFO: ***************** Test_005_Search_Customer_By_Name is completed ******************

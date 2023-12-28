@@ -1,0 +1,82 @@
+{
+    "customer1": {
+        "Email": "zsol001@gmail.com",
+        "Password": "test1234",
+        "First name": "Khosruz",
+        "Last name": "Zaman",
+        "Date of birth": "01/02/1990",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Actively pressed",
+        "Admin comment": "Approved for a admin"
+    },
+    "customer2": {
+        "Email": "zsol002@gmail.com",
+        "Password": "test1235",
+        "First name": "Miraz",
+        "Last name": "Zaman",
+        "Date of birth": "08/08/2021",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Actively pressed",
+        "Admin comment": "Approved for a Guest"
+    },
+    "customer3": {
+        "Email": "zsol003@gmail.com",
+        "Password": "test1236",
+        "First name": "Salam",
+        "Last name": "Ahmed",
+        "Date of birth": "01/09/2000",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Not Pressed",
+        "Admin comment": "Approved for a Registered"
+    },
+    "customer4": {
+        "Email": "zsol004@gmail.com",
+        "Password": "test1237",
+        "First name": "Kalam",
+        "Last name": "Mia",
+        "Date of birth": "06/09/1988",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Actively pressed",
+        "Admin comment": "Approved for a Forum Member"
+    },
+    "customer5": {
+        "Email": "zsol005@gmail.com",
+        "Password": "test1238",
+        "First name": "Alim",
+        "Last name": "Uddin",
+        "Date of birth": "01/12/1996",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Actively pressed",
+        "Admin comment": "Approved for a Vendors"
+    },
+    "customer6": {
+        "Email": "zsol006@gmail.com",
+        "Password": "test1239",
+        "First name": "Jamil",
+        "Last name": "Khan",
+        "Date of birth": "02/02/1989",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Not Pressed",
+        "Admin comment": "Approved for a Admin"
+    },
+    "customer7": {
+        "Email": "zsol007@gmail.com",
+        "Password": "test1240",
+        "First name": "Kamil",
+        "Last name": "Khan",
+        "Date of birth": "09/06/1995",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Actively pressed",
+        "Admin comment": "Approved for a Guest"
+    },
+    "customer8": {
+        "Email": "zsol008@gmail.com",
+        "Password": "test1241",
+        "First name": "Samil",
+        "Last name": "Talukdar",
+        "Date of birth": "12/12/1975",
+        "Company name": "Click On Zsolution",
+        "Newsletter": "Not Pressed",
+        "Admin comment": "Approved for a Admin"
+    }
+}

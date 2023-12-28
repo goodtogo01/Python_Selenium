@@ -1,0 +1,22 @@
+{
+    "login1": {
+        "userName": "admin@yourstore.com",
+        "password": "admin",
+        "expected_results": "Passed"
+    },
+    "login2": {
+        "userName": "admin@yourstore.com",
+        "password": "adsin",
+        "expected_results": "Failed"
+    },
+    "login3": {
+        "userName": "admin2@yourstore.com",
+        "password": "admin",
+        "expected_results": "Failed"
+    },
+    "login4": {
+        "userName": "notmin@yourstore.com",
+        "password": "Notmin",
+        "expected_results": "Failed"
+    }
+}

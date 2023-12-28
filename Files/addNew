@@ -1,0 +1,98 @@
+import random
+import string
+import time
+from secrets import randbelow
+from struct import unpack
+
+
+from utilities import XLUtils
+import pytest
+from pageObjects.LoginPage import Login_Functionalities as LP
+from pageObjects.AddCustomerPage import AddCustomer as AC
+from utilities.readProperties import ReadProperties
+from utilities.customLogger import LogGenerations
+from selenium.webdriver.common.by import By
+import pandas as pd
+import numpy as np
+
+
+class Test_003_Add_New_Customer:
+    baseURL = ReadProperties.getURL()
+    username = ReadProperties.getUsername()
+    password = ReadProperties.getPassword()
+    save_picture = "C:\\Users\\zaman\\PycharmProjects\\CommerceApp\\Screenshots\\"
+    data_sheet_path = "C:\\Users\\zaman\\PycharmProjects\\CommerceApp\\TestData\\test_Data.xlsx"
+    rand = str(randbelow(55))
+    logger = LogGenerations.logGen()
+
+
+    @pytest.mark.regression
+    def test_add_customer(self, setup):
+        self.logger.info("***************** Test_003_Add_New_Customer ******************\n")
+        self.logger.info("***************** Start Login with Valid Credentials **********************")
+        driver = setup
+        loginPage = LP(driver)
+        driver.get(self.baseURL)
+        loginPage.setUsername(self.username)
+        loginPage.setPassword(self.password)
+        loginPage.clickLogin()
+        self.logger.info("**************** Login Successful *******************")
+        self.logger.info("******* Start processing to adding new customer details ***********")
+        # Object of AddCustomer class
+        addCus = AC(driver)
+
+        # Adding customer details
+        addCus.clicCustomerMainManu()
+        time.sleep(3)
+        addCus.clickCustomerManu()
+        time.sleep(3)
+        addCus.clickAddNewButton()
+        time.sleep(3)
+        self.logger.info("******* Start adding new customer details ***********")
+
+        # Get All the rows
+        self.rows = XLUtils.getRowCount(self.data_sheet_path, 'AddNew')
+        print("Number of Rows: ", self.rows)
+        list_Status = []  # empty list for actual status
+
+        email = self.random_generator()+"@gmail.com"
+        print(email)
+        addCus.setEmail(email)
+
+        addCus.setPassword("test1234")
+        addCus.setFirstName("Khosruz")
+        addCus.setLastName("zaman")
+        addCus.setGender("Male")
+        addCus.setDOB("06/18/1665")
+        addCus.setCompanyName("ClickMe")
+        addCus.checkOnTax()
+        addCus.setCustomersRole("Guests")
+        addCus.setManagerOfVendor("Vendor 1")
+        addCus.checkOnActive()
+        addCus.adminComments("Welcome to this Organizations!! ")
+        addCus.clickOnSave()
+        time.sleep(5)
+        self.logger.info("*******  new customer details is saved ***********")
+        self.logger.info("\n******* Verify the newly created customer ***********")
+
+        self.message = driver.find_element(By.TAG_NAME, "body").text
+
+        if 'customer has been added successfully.' in self.message:
+            assert True == True
+            self.logger.info("********** Customer added successfully **************")
+            driver.save_screenshot(self.save_picture + "CustomerAdded_" + self.rand + ".png")
+        else:
+            driver.save_screenshot(self.save_picture+"CustomerNotAdded_"+self.rand+".png")
+            self.logger.error("*************** Add customer is failed!! *****************")
+            assert True == False
+        driver.close()
+        self.logger.info("***************** Test_003_Add_New_Customer is completed ******************")
+
+    def random_generator(self, size=8, chars=string.ascii_lowercase+string.digits):
+        return ''.join(random.choice(chars) for x in range(size))
+
+
+
+
+
+
