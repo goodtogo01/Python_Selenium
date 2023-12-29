@@ -13,12 +13,11 @@ from utilities.customLogger import LogGenerations
 from selenium.webdriver.common.by import By
 
 
-
-class Test_003_Add_New_Customer:
+class Test_002_Add_New_Customer:
     baseURL = ReadProperties.getURL()
     username = ReadProperties.getUsername()
     password = ReadProperties.getPassword()
-    save_picture = "C:\\Users\zaman\\PycharmProjects\\PythonSelenium\\Screenshoot"
+    save_picture = "C:\\Users\\zaman\\PycharmProjects\\PythonSelenium\\Screenshots\\"
     data_sheet_path = "C:\\Users\\zaman\\PycharmProjects\\PythonSelenium\\TestData\\test_Data.xlsx"
 
     rand = str(randbelow(55))
@@ -26,7 +25,7 @@ class Test_003_Add_New_Customer:
 
     @pytest.mark.regression
     def test_add_customer(self, setup):
-        self.logger.info("***************** Test_003_Add_New_Customer ******************")
+        self.logger.info("***************** Test_002_Add_New_Customer ******************")
         self.logger.info("***************** Start Login with Valid Credentials **********************")
         driver = setup
         loginPage = LP(driver)
@@ -84,7 +83,7 @@ class Test_003_Add_New_Customer:
             self.logger.error("*************** Add customer is failed!! *****************")
             assert True == False
         driver.close()
-        self.logger.info("***************** Test_003_Add_New_Customer is completed ******************")
+        self.logger.info("***************** Test_002_Add_New_Customer is completed ******************")
 
     def random_generator(self, size=8, chars=string.ascii_lowercase + string.digits):
         return ''.join(random.choice(chars) for x in range(size))

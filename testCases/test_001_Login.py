@@ -17,7 +17,7 @@ class Test_001_Login:
 
     @pytest.mark.sanity
     def test_Homepage_Title(self, setup):
-        self.logger.info("***************** Test_001_Start_Execution **********************")
+        self.logger.info("***************** Test_001_Login_Start_Execution **********************")
         driver = setup
         driver.get(self.baseURL)
         # self.logger.info("***************** Varify Home Page Title **********************")
@@ -58,5 +58,6 @@ class Test_001_Login:
             self.logger.info("***************** Page Title verification is Failed **********************")
             assert False
         driver.close()
+        self.logger.info("******************* Test_001_Login Testing Completed ***********************")
 
 

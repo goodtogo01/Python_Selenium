@@ -13,7 +13,7 @@ from utilities.customLogger import LogGenerations
 from selenium.webdriver.common.by import By
 
 
-class Test_004_Search_Customer_By_Email:
+class Test_003_Search_Customer_By_Email:
     baseURL = ReadProperties.getURL()
     username = ReadProperties.getUsername()
     password = ReadProperties.getPassword()
@@ -23,7 +23,7 @@ class Test_004_Search_Customer_By_Email:
 
     @pytest.mark.regression
     def test_search_customerByEmail(self, setup):
-        self.logger.info("***************** Test_004_Search_Customer_By_Email ******************")
+        self.logger.info("***************** Test_003_Search_Customer_By_Email ******************")
         self.logger.info("***************** Start Login with Valid Credentials **********************")
         driver = setup
         loginPage = LP(driver)
@@ -55,5 +55,5 @@ class Test_004_Search_Customer_By_Email:
         status = srCus.searchCustomerByEmail("victoria_victoria@nopCommerce.com")
         driver.save_screenshot(self.save_picture + "SearchCustomer_" + self.rand + ".png")
         assert True == status
-        self.logger.info("***************** Test_004_Search_Customer_By_Email is completed ******************")
+        self.logger.info("***************** Test_003_Search_Customer_By_Email is completed ******************")
         driver.close()
