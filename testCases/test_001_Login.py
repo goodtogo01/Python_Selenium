@@ -15,8 +15,8 @@ class Test_001_Login:
     rand = str(randbelow(50))
     logger = LogGenerations.logGen()
 
-    @pytest.mark.sanity
-    def test_Homepage_Title(self, setup):
+    @pytest.mark.parametrize("a, b, res", [(1,2,3), (9,8,17), (10,10,20)])
+    def test_Homepage_Title(self, setup, a, b, res):
         self.logger.info("***************** Test_001_Login_Start_Execution **********************")
         driver = setup
         driver.get(self.baseURL)
@@ -31,7 +31,7 @@ class Test_001_Login:
             print("The Title is not Expected as : ", driver.title)
             self.logger.error("***************** Page Title is Failed **********************")
             assert False
-
+        assert a+b == res
         driver.close()
 
     @pytest.mark.regression

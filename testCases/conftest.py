@@ -1,10 +1,15 @@
+import datetime
+
+import pytest_html
 from selenium import webdriver
 import pytest
 from pytest_metadata.plugin import metadata_key
 
 
+# Parameterize with fixture ==== 'params=["First Itr", "Second Itr"]'
+
 @pytest.fixture(autouse=True)
-def setup(browser):
+def setup(request, browser):
     if browser == "chrome":
         print("\nLaunching chrome browser............................")
         driver = webdriver.Chrome()
@@ -49,3 +54,24 @@ def pytest_metadata(metadata):
 
 def pytest_html_report_title(report):
     report.title = "Commerce Application"
+
+
+def pytest_html_duration_format(duration):
+    duration_timedelta = datetime.timedelta(seconds=duration)
+    time = datetime.datetime(1, 1, 1) + duration_timedelta
+    return time.strftime("%H:%M:%S")
+
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    extras = getattr(report, "extras", [])
+    if report.when == "call":
+        # always add url to report
+        extras.append(pytest_html.extras.url("https://github.com/goodtogo01/Reports.git"))
+        xfail = hasattr(report, "wasxfail")
+        if (report.skipped and xfail) or (report.failed and not xfail):
+            # only add additional html on failure
+            extras.append(pytest_html.extras.html("<div>Additional HTML</div>"))
+        report.extras = extras

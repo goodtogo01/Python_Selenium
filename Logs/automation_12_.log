@@ -1,0 +1,19 @@
+03/02/2024 12:31:56 PM: INFO: ***************** Test_002_Add_New_Customer ******************
+03/02/2024 12:31:56 PM: INFO: ***************** Start Login with Valid Credentials **********************
+03/02/2024 12:31:59 PM: INFO: **************** Login Successful *******************
+03/02/2024 12:31:59 PM: INFO: ******* Start processing to adding new customer details ***********
+03/02/2024 12:32:10 PM: INFO: ******* Start adding new customer details ***********
+03/02/2024 12:32:29 PM: INFO: *******  new customer details is saved ***********
+03/02/2024 12:32:29 PM: INFO: ******* Verify the newly created customer ***********
+03/02/2024 12:32:29 PM: INFO: ********** Customer added successfully **************
+03/02/2024 12:32:31 PM: INFO: ***************** Test_002_Add_New_Customer is completed ******************
+03/09/2024 05:57:42 PM: INFO: ***************** Test_001_Login_Start_Execution **********************
+03/09/2024 05:57:43 PM: INFO: ***************** Page Title verification is Passed **********************
+03/09/2024 05:57:52 PM: INFO: ***************** Test_001_Login_Start_Execution **********************
+03/09/2024 05:57:53 PM: INFO: ***************** Page Title verification is Passed **********************
+03/09/2024 05:58:02 PM: INFO: ***************** Test_001_Login_Start_Execution **********************
+03/09/2024 05:58:02 PM: INFO: ***************** Page Title verification is Passed **********************
+03/09/2024 05:58:11 PM: INFO: ***************** Start Login with Valid Credentials **********************
+03/09/2024 05:58:11 PM: INFO: ***************** Varify Login Page Title **********************
+03/09/2024 05:58:24 PM: INFO: ***************** Login with valid credentials is Passed **********************
+03/09/2024 05:58:25 PM: INFO: ******************* Test_001_Login Testing Completed ***********************

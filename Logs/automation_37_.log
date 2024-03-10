@@ -1,0 +1,8 @@
+03/01/2024 11:11:40 PM: INFO: ***************** Test_005_Search_Customer_By_Name ******************
+
+03/01/2024 11:11:40 PM: INFO: ***************** Start Login with Valid Credentials **********************
+03/01/2024 11:11:44 PM: INFO: **************** Login Successful *******************
+03/01/2024 11:11:44 PM: INFO: ******* Start processing to searching a existing customer ***********
+03/01/2024 11:11:44 PM: INFO: ******* Moving to the search page ***********
+03/01/2024 11:11:57 PM: INFO: ******* Start searching processes with Name ***********
+03/01/2024 11:12:03 PM: INFO: ***************** Test_005_Search_Customer_By_Name is completed ******************

@@ -1,0 +1,38 @@
+02/28/2024 12:57:52 PM: INFO: ***************** Test_001_Login_Start_Execution **********************
+02/28/2024 12:57:53 PM: INFO: ***************** Page Title verification is Passed **********************
+02/28/2024 12:58:03 PM: INFO: ***************** Start Login with Valid Credentials **********************
+02/28/2024 12:58:03 PM: INFO: ***************** Varify Login Page Title **********************
+02/28/2024 12:58:15 PM: INFO: ***************** Login with valid credentials is Passed **********************
+02/28/2024 12:58:17 PM: INFO: ******************* Test_001_Login Testing Completed ***********************
+02/28/2024 12:58:24 PM: INFO: ***************** Test_002_Add_New_Customer ******************
+02/28/2024 12:58:24 PM: INFO: ***************** Start Login with Valid Credentials **********************
+02/28/2024 12:58:27 PM: INFO: **************** Login Successful *******************
+02/28/2024 12:58:27 PM: INFO: ******* Start processing to adding new customer details ***********
+02/28/2024 12:58:38 PM: INFO: ******* Start adding new customer details ***********
+02/28/2024 12:58:56 PM: INFO: *******  new customer details is saved ***********
+02/28/2024 12:58:56 PM: INFO: ******* Verify the newly created customer ***********
+02/28/2024 12:58:56 PM: INFO: ********** Customer added successfully **************
+02/28/2024 12:58:57 PM: INFO: ***************** Test_002_Add_New_Customer is completed ******************
+02/28/2024 12:59:05 PM: INFO: ***************** Test_003_Search_Customer_By_Email ******************
+02/28/2024 12:59:05 PM: INFO: ***************** Start Login with Valid Credentials **********************
+02/28/2024 12:59:07 PM: INFO: **************** Login Successful *******************
+02/28/2024 12:59:07 PM: INFO: ******* Start processing to searching a existing customer ***********
+02/28/2024 12:59:07 PM: INFO: ******* Moving to the search page ***********
+02/28/2024 12:59:14 PM: INFO: ******* Start searching processes with email id ***********
+02/28/2024 12:59:25 PM: INFO: ***************** Test_003_Search_Customer_By_Email is completed ******************
+02/28/2024 12:59:33 PM: INFO: ***************** Test_005_Search_Customer_By_Name ******************
+
+02/28/2024 12:59:33 PM: INFO: ***************** Start Login with Valid Credentials **********************
+02/28/2024 12:59:36 PM: INFO: **************** Login Successful *******************
+02/28/2024 12:59:36 PM: INFO: ******* Start processing to searching a existing customer ***********
+02/28/2024 12:59:36 PM: INFO: ******* Moving to the search page ***********
+02/28/2024 12:59:49 PM: INFO: ******* Start searching processes with Name ***********
+02/28/2024 12:59:55 PM: INFO: ***************** Test_005_Search_Customer_By_Name is completed ******************
+03/02/2024 12:27:51 PM: INFO: ***************** Test_005_Search_Customer_By_Name ******************
+
+03/02/2024 12:27:51 PM: INFO: ***************** Start Login with Valid Credentials **********************
+03/02/2024 12:27:56 PM: INFO: **************** Login Successful *******************
+03/02/2024 12:27:56 PM: INFO: ******* Start processing to searching a existing customer ***********
+03/02/2024 12:27:56 PM: INFO: ******* Moving to the search page ***********
+03/02/2024 12:28:08 PM: INFO: ******* Start searching processes with Name ***********
+03/02/2024 12:28:14 PM: INFO: ***************** Test_005_Search_Customer_By_Name is completed ******************
